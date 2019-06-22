@@ -1,33 +1,96 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%;
+  width: 100%;
+}
+.App-Wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.App-header{
+  width: 100%;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  width: 150px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.LogoArea {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 10px 0;
+}
+
+.LogoCenter > h1 {
+  margin: 0;
+  padding-left: 10px;
+  font-weight: 500;
+  display: inline;
+}
+
+.LoginForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -56px;
+  margin-left: -140px;
+}
+
+.LogoCenter {
+  margin: 0 auto;
+  display: flex;
+  padding: 10px 10px 0px;
+  width: 180px;
+}
+
+.signInLabel {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.LoginForm label,
+.LoginForm input {
+  width: 100%;
+}
+
+.LoginForm label {
+  margin: 15px 0px;
+  color: #ADB4BB;
+  font-size: small;
+}
+
+.LoginForm input {
+  width: 99%;
+  background-color: #E8EBEF;
+  border: 1px solid #E8EBEF;
+  padding: 5px 0px;
+  border-radius: 2px;
+  margin: 10px 0px 0px;
+}
+
+.LoginForm #submit {
+  width: 100%;
+  background-color: #1676F4;
+  border: 1px solid #1676F4;
+  color: #fff;
+  padding: 5px 0px;
+  border-radius: 2px;
+  margin: 10px 0px;
+}
+
+/* delete after put on other source */
+.Header__Logo {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.App-Login {
+  margin: 0 auto;
+  max-width: 250px;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
