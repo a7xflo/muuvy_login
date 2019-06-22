@@ -2,6 +2,13 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 .App-Wrapper{
   width: 100%;
   height: 100%;
@@ -28,25 +35,22 @@ html, body {
 }
 
 .LoginForm {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -56px;
-  margin-left: -140px;
+  float: left;
+  width: 300px;
 }
 
 .LogoCenter {
   margin: 0 auto;
   display: flex;
   padding: 10px 10px 0px;
-  width: 180px;
+  width: auto;
 }
 
 .signInLabel {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 110%;
-    font-weight: bold;
+  margin: 25px 0px 10px;
+  text-align: center;
+  font-size: 110%;
+  font-weight: bold;
 }
 
 .LoginForm label,
@@ -61,10 +65,10 @@ html, body {
 }
 
 .LoginForm input {
-  width: 99%;
+  width: 100%;
   background-color: #E8EBEF;
   border: 1px solid #E8EBEF;
-  padding: 5px 0px;
+  padding: 5px 5px;
   border-radius: 2px;
   margin: 10px 0px 0px;
 }
@@ -87,10 +91,27 @@ html, body {
 }
 
 .App-Login {
-  margin: 0 auto;
-  max-width: 250px;
+  z-index: 999;
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  margin: -125px 0 0 -150px;
+  left: 50%;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.LoginError {
+  color: #FF0000;
+  padding: 10px 0px;
+  margin: 0;
+}
+
+.LoginError span {
+  position: relative;
+  font-size: 12px;
+  top: 2px;
+  left: 5px;
 }

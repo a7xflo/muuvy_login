@@ -46,23 +46,20 @@ class LoginPage extends Component {
               <h1 class="Header__Title">muuvy</h1>
               </div>
             </div>
-                    
-            
 
           <div class="LoginForm">
           <form onSubmit={this.handleSubmit}>
-              {
-                this.state.error &&
-                <h3 data-test="error" onClick={this.dismissError}>
-                  <button onClick={this.dismissError}>✖</button>
-                  {this.state.error}
-                </h3>
-              }
               <h2 class="signInLabel">Sign in to muuvy</h2>
               <label>Username</label>
               <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange}/> 
-            <input id="submit" type="submit" value="Login" data-test="submit" />  
-           
+              <input id="submit" type="submit" value="Login" data-test="submit" />  
+              {
+                this.state.error &&
+                <p class="LoginError" data-test="error" onClick={this.dismissError}>
+                  <button onClick={this.dismissError}>✖</button>
+                  <span>{this.state.error}</span>
+                </p>
+              }
             </form>
           </div>
         </div>
