@@ -28,7 +28,7 @@ class LoginPage extends Component {
     }
     else {
     // POST to API-Service
-    axios.post('http://localhost:8080/api/user/', {
+    axios.post('http://localhost:8080/api/user/login/', {
       fullName: this.state.username
       })
       .then(function (response) {
