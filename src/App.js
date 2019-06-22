@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 import muuvyLogo from './img/logo.png';
 
@@ -25,6 +26,18 @@ class LoginPage extends Component {
     if (!this.state.username) {
       return this.setState({ error: 'Username is required' });
     }
+    else {
+    // POST to API-Service
+    axios.post('http://localhost:8080/api/user/', {
+      fullName: this.state.username
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
 
     return this.setState({ error: '' });
   }
@@ -36,7 +49,7 @@ class LoginPage extends Component {
   };
 
   render() {
- 
+
     return (
     <div className="App-Wrapper">
         <div className="App-Login">
